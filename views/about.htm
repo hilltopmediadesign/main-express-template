@@ -1,0 +1,12 @@
+<script>
+
+  //socket.io -- watch for socket.io port with ip of server
+  var socket = io.connect('http://45.55.21.233:8000');
+  socket.on('news', function (data) {
+    console.log(data);
+    socket.emit('my other event', { my: 'data' });
+  });
+
+</script>
+
+This is the about page. and more
